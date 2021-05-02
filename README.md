@@ -1,4 +1,4 @@
-# Steam DINO: match Steam Banners with Facebook's DINO
+# Steam DINO: match Steam Banners with FB's DINO
 
 This repository contains Python code to retrieve Steam games with similar store banners, using [Facebook's DINO][fb-dino-blog].
 
