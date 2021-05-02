@@ -6,16 +6,6 @@ Image similarity is assessed by the cosine similarity between image features enc
 
 ![Similar vertical banners][wiki-cover]
 
-## Requirements
-
--   Install the latest version of [Python 3.X][download-python].
--   Install the required packages:
-
-```bash
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
 ## Data
 
 Data is identical to the one used in [`steam-CLIP`][banner-repository-CLIP].
@@ -51,5 +41,4 @@ Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebo
 [natural-language-search]: <https://github.com/woctezuma/steam-image-search>
 [my-flask-API]: <https://github.com/woctezuma/heroku-flask-api>
 
-[download-python]: <https://www.python.org/downloads/>
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
