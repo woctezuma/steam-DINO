@@ -6,6 +6,15 @@ Image similarity is assessed by the cosine similarity between image features enc
 
 ![Similar vertical banners][wiki-cover]
 
+## Model
+
+DINO is a method to train self-supervided models, especially well-suited for Vision Transformers (ViT).
+Model checkpoints were pre-trained on ImageNet-1k (1.28M images with 1000 classes).
+
+In this repository, image features are extracted:
+- following [different strategies][issue-feature-extraction],
+- and based on different models (`ViT-S/16`, `ViT-S/8`, `ViT-B/16`, `ViT-B/8`).
+
 ## Data
 
 Data is identical to the one used in [`steam-CLIP`][banner-repository-CLIP].
@@ -32,6 +41,8 @@ Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebo
 
 [wiki-cover]: <https://github.com/woctezuma/steam-DINO/wiki/img/illustration.jpg>
 [match_steam_banners_with_DINO-notebook]: <https://colab.research.google.com/github/woctezuma/steam-DINO/blob/main/match_steam_banners_with_DINO.ipynb>
+
+[issue-feature-extraction]: <https://github.com/facebookresearch/dino/issues/72>
 
 [fb-dino-blog]: <https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training>
 [fb-dino-code]: <https://github.com/facebookresearch/dino>
