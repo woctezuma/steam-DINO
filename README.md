@@ -9,7 +9,7 @@ Image similarity is assessed by the cosine similarity between image features enc
 ## Model
 
 DINO is a method to train self-supervised models, especially well-suited for Vision Transformers (ViT).
-Model checkpoints were pre-trained on ImageNet-1k (1.28M images with 1000 classes).
+Model checkpoints were pre-trained on ImageNet-1k (1.28M images with 1000 classes) **with no label**.
 
 In this repository, image features are extracted:
 - following [different strategies][issue-feature-extraction],
