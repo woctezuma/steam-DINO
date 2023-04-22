@@ -52,6 +52,12 @@ Therefore, it would have been better:
 Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebook].
 [![Open In Colab][colab-badge]][match_steam_banners_with_DINO-notebook]
 
+## Perspectives
+
+Other strategies for the creation of the image embedding would include:
+- the concatenation of features extracted [at multiple scales][dino-multi-scale],
+- the concatenation of the [CLS] token with [GeM pooled patch tokens][dino-gem-pooling], as in [copy detection][dino-copy-detection].
+
 ## References
 
 -   Facebook's DINO:
@@ -81,5 +87,8 @@ Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebo
 [github-input-data]: <https://github.com/woctezuma/steam-DINO/releases/tag/input>
 [dino-pre-process]: <https://github.com/woctezuma/match-steam-banners/blob/0c752609cac64448d874340abbaeb6d337f3e8ba/dino_utils.py#L165-L179>
 [dino-intensity-normalization]: <https://github.com/facebookresearch/dino/blob/main/eval_linear.py>
+[dino-multi-scale]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/utils.py#L795-L809>
+[dino-gem-pooling]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/eval_copy_detection.py#L166-L175>
+[dino-copy-detection]: <https://github.com/facebookresearch/dino/blob/main/eval_copy_detection.py>
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
