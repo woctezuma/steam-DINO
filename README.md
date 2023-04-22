@@ -71,6 +71,24 @@ transform = pth_transforms.Compose([
 Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebook].
 [![Open In Colab][colab-badge]][match_steam_banners_with_DINO-notebook]
 
+## Results
+
+Results were obtained in different settings identified by a suffix, e.g. `ComplexB8`, where:
+-   `Simple` stands for the simple feature extraction, similar to the code in [`eval_knn.py`][dino-knn],
+-   `Complex` stands for the complex feature extraction, similar to the code in [`eval_linear.py`][dino-linear],
+-   `B8` for ViT-B/8: the `Base` architecture with patch resolution `8`.
+
+If we look for trucks in banners similar to *Euro Truck Simulator 2*'s banner, results are:
+- similar for `Simple` and `Complex`,
+- more satisfactory with `B16` and `S8`, compared to `B8` or `S16`,
+- slightly more satisfacfory with `B16` compared to `S8`.
+
+Qualitatively, I would rank the top strategies, starting with the most satisfactory:
+1) `SimpleB16`
+2) `ComplexB16`
+3) `ComplexS8`
+4) `SimpleS8`
+
 ## Perspectives
 
 Other strategies for the creation of the image embedding would include:
