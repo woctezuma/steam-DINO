@@ -25,7 +25,7 @@ It consists of **vertical** Steam banners (300x450 resolution), available for 29
 
 Images are resized to 224x224 resolution and available in an archive (703 MB) [as a release][github-input-data] in this repository.
 
-However, DINO has its own [pre-processing pipeline][dino-pre-process],  as in [eval_linear.py][dino-linear] and [eval_knn.py][dino-knn]:
+However, DINO has its own [pre-processing pipeline][dino-pre-process],  as in [`eval_linear.py`][dino-linear] and [`eval_knn.py`][dino-knn]:
 - resize to 256 resolution,
 - center-crop at 224 resolution,
 - normalize intensity.
@@ -47,7 +47,7 @@ Therefore, it would have been better:
 - either to use 256 resolution for the input,
 - or to use 224 resolution (as I did) but without resizing-then-center-cropping when calling DINO.
 
-This is the case for [eval_copy_detection.py][dino-copy-detection]:
+This is the case for [`eval_copy_detection.py`][dino-copy-detection]:
 
 ```python
 transform = pth_transforms.Compose([ 
