@@ -93,6 +93,15 @@ Qualitatively, I would rank the strategies, starting with the most satisfactory 
 7) `ComplexS16`
 8) `SimpleS16`
 
+The ranking is compatible with what was observed with [the performance observed in the paper for k-NN task][github-issue-knn]:
+> `ViT-S/16` < `ViT-B/16` < `ViT-B/8` < `ViT-S/8`
+with the exception that `B/16` seems to be the best performing model.
+
+The fact that the `B/8` model seems under-performing is not surprising, as its hyperparameters [could have been further optimized][github-issue-b8].
+
+[github-issue-knn]: <https://github.com/facebookresearch/dino/issues/13#issuecomment-857469740>
+[github-issue-b8]: <https://github.com/facebookresearch/dino/issues/13#issuecomment-832617172>
+
 ## Perspectives
 
 Other strategies for the creation of the image embedding would include:
