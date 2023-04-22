@@ -75,7 +75,7 @@ Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebo
 
 Other strategies for the creation of the image embedding would include:
 - the concatenation of features extracted [at multiple scales][dino-multi-scale],
-- the concatenation of the [CLS] token with [GeM pooled patch tokens][dino-gem-pooling], as in [copy detection][dino-copy-detection].
+- the concatenation of the [CLS] token with [GeM pooled patch tokens][dino-gem-pooling], as for [copy detection][dino-copy-detection].
 
 ## References
 
