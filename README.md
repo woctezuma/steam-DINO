@@ -93,8 +93,11 @@ Qualitatively, I would rank the strategies, starting with the most satisfactory 
 7) `ComplexS16`
 8) `SimpleS16`
 
+In summary:
+> `ViT-S/16` < `ViT-B/8` < `ViT-S/8` < **`ViT-B/16`**
+
 The ranking is compatible with the performance [observed in the paper for the k-NN task][github-issue-knn]:
-> `ViT-S/16` < `ViT-B/16` < `ViT-B/8` < `ViT-S/8`
+> `ViT-S/16` < **`ViT-B/16`** < `ViT-B/8` < `ViT-S/8`
 
 with the exception that `B/16` seems to be the best performing model in our few test cases.
 
