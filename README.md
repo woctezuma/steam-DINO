@@ -21,6 +21,32 @@ Data is identical to the one used in [`steam-CLIP`][banner-repository-CLIP].
 
 It consists of **vertical** Steam banners (300x450 resolution), available for 29982 out of 48792 games, i.e. 61.4% of games.
 
+### Pre-processing
+
+Images are resized to 224x224 resolution and available in an archive (703 MB) [as a release][github-input-data] in this repository.
+
+However, DINO has its own [pre-processing pipeline][dino-pre-process]:
+- resize to 256 resolution,
+- center-crop at 224 resolution,
+- normalize intensity as in [eval_linear.py][dino-intensity-normalization]
+
+```python
+preprocess = pth_transforms.Compose(
+    [
+        pth_transforms.Resize(
+            256, interpolation=pth_transforms.InterpolationMode.BICUBIC
+        ),
+        pth_transforms.CenterCrop(224),
+        pth_transforms.ToTensor(),
+        pth_transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)),
+    ]
+)
+```
+
+Therefore, it would have been better:
+- either to use 256 resolution for the input,
+- or to use 224 resolution (as I did) but without resizing-then-center-cropping when calling DINO.
+
 ## Usage
 
 Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebook].
@@ -51,5 +77,9 @@ Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebo
 [banner-repository-CLIP]: <https://github.com/woctezuma/steam-CLIP>
 [natural-language-search]: <https://github.com/woctezuma/steam-image-search>
 [my-flask-API]: <https://github.com/woctezuma/heroku-flask-api>
+
+[github-input-data]: <https://github.com/woctezuma/steam-DINO/releases/tag/input>
+[dino-pre-process]: <https://github.com/woctezuma/match-steam-banners/blob/0c752609cac64448d874340abbaeb6d337f3e8ba/dino_utils.py#L165-L179>
+[dino-intensity-normalization]: <https://github.com/facebookresearch/dino/blob/main/eval_linear.py>
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
