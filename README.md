@@ -25,10 +25,10 @@ It consists of **vertical** Steam banners (300x450 resolution), available for 29
 
 Images are resized to 224x224 resolution and available in an archive (703 MB) [as a release][github-input-data] in this repository.
 
-However, DINO has its own [pre-processing pipeline][dino-pre-process]:
+However, DINO has its own [pre-processing pipeline][dino-pre-process],  as in [eval_linear.py][dino-linear] and [eval_knn.py][dino-knn]:
 - resize to 256 resolution,
 - center-crop at 224 resolution,
-- normalize intensity as in [eval_linear.py][dino-intensity-normalization]
+- normalize intensity.
 
 ```python
 preprocess = pth_transforms.Compose(
@@ -47,7 +47,17 @@ Therefore, it would have been better:
 - either to use 256 resolution for the input,
 - or to use 224 resolution (as I did) but without resizing-then-center-cropping when calling DINO.
 
-This is the case for [`eval_image_retrieval.py`][dino-image-retrieval]:
+This is the case for [eval_copy_detection.py][dino-copy-detection]:
+
+```python
+transform = pth_transforms.Compose([ 
+    pth_transforms.Resize((args.imsize, args.imsize), interpolation=3), 
+    pth_transforms.ToTensor(), 
+    pth_transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)), 
+])
+```
+
+This is also the case for [`eval_image_retrieval.py`][dino-image-retrieval]:
 
 ```python
 transform = pth_transforms.Compose([ 
@@ -95,10 +105,11 @@ Other strategies for the creation of the image embedding would include:
 
 [github-input-data]: <https://github.com/woctezuma/steam-DINO/releases/tag/input>
 [dino-pre-process]: <https://github.com/woctezuma/match-steam-banners/blob/0c752609cac64448d874340abbaeb6d337f3e8ba/dino_utils.py#L165-L179>
-[dino-intensity-normalization]: <https://github.com/facebookresearch/dino/blob/main/eval_linear.py>
+[dino-linear]: <https://github.com/facebookresearch/dino/blob/main/eval_linear.py>
 [dino-multi-scale]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/utils.py#L795-L809>
 [dino-gem-pooling]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/eval_copy_detection.py#L166-L175>
 [dino-copy-detection]: <https://github.com/facebookresearch/dino/blob/main/eval_copy_detection.py>
 [dino-image-retrieval]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/eval_image_retrieval.py#L106-L109>
+[dino-knn]: <https://github.com/facebookresearch/dino/blob/main/eval_knn.py>
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
