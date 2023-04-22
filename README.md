@@ -101,7 +101,7 @@ The ranking is compatible with the performance [observed in the paper for the k-
 
 with the exception that `B/16` seems to be the best performing model in our few test cases.
 
-NB: `B/8` is expected to under-perform, as its hyperparameters [could have been further optimized][github-issue-b8].
+NB: `B/8` is expected to under-perform w.r.t. `S/8`, as its hyperparameters [could have been further optimized][github-issue-b8].
 
 [github-issue-knn]: <https://github.com/facebookresearch/dino/issues/13#issuecomment-857469740>
 [github-issue-b8]: <https://github.com/facebookresearch/dino/issues/13#issuecomment-832617172>
