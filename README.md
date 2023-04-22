@@ -83,11 +83,15 @@ If we look for trucks in banners similar to *Euro Truck Simulator 2*'s banner, r
 - more satisfactory with `B16` and `S8`, compared to `B8` or `S16`,
 - slightly more satisfacfory with `B16` compared to `S8`.
 
-Qualitatively, I would rank the top strategies, starting with the most satisfactory:
+Qualitatively, I would rank the strategies, starting with the most satisfactory one:
 1) `SimpleB16`
 2) `ComplexB16`
 3) `ComplexS8`
 4) `SimpleS8`
+5) `SimpleB8`
+6) `ComplexB8`
+7) `ComplexS16`
+8) `SimpleS16`
 
 ## Perspectives
 
