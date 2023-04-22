@@ -47,6 +47,15 @@ Therefore, it would have been better:
 - either to use 256 resolution for the input,
 - or to use 224 resolution (as I did) but without resizing-then-center-cropping when calling DINO.
 
+This is the case for [`eval_image_retrieval.py`][dino-image-retrieval]:
+
+```python
+transform = pth_transforms.Compose([ 
+    pth_transforms.ToTensor(), 
+    pth_transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)), 
+])
+```
+
 ## Usage
 
 Run [`match_steam_banners_with_DINO.ipynb`][match_steam_banners_with_DINO-notebook].
@@ -90,5 +99,6 @@ Other strategies for the creation of the image embedding would include:
 [dino-multi-scale]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/utils.py#L795-L809>
 [dino-gem-pooling]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/eval_copy_detection.py#L166-L175>
 [dino-copy-detection]: <https://github.com/facebookresearch/dino/blob/main/eval_copy_detection.py>
+[dino-image-retrieval]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/eval_image_retrieval.py#L106-L109>
 
 [colab-badge]: <https://colab.research.google.com/assets/colab-badge.svg>
