@@ -47,6 +47,8 @@ Therefore, it would have been better:
 - either to use 256 resolution for the input,
 - or to use 224 resolution (as I did) but without resizing-then-center-cropping when calling DINO.
 
+Choices of pre-processing are discussed in [this Github issue][dinov2-pre-process] of DINOv2.
+
 This is the case for [`eval_copy_detection.py`][dino-copy-detection]:
 
 ```python
@@ -140,6 +142,7 @@ Other strategies for the creation of the image embedding would include:
 
 [github-input-data]: <https://github.com/woctezuma/steam-DINO/releases/tag/input>
 [dino-pre-process]: <https://github.com/woctezuma/match-steam-banners/blob/0c752609cac64448d874340abbaeb6d337f3e8ba/dino_utils.py#L165-L179>
+[dinov2-pre-process]: <https://github.com/facebookresearch/dinov2/issues/86#issuecomment-1537198785>
 [dino-linear]: <https://github.com/facebookresearch/dino/blob/main/eval_linear.py>
 [dino-multi-scale]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/utils.py#L795-L809>
 [dino-gem-pooling]: <https://github.com/facebookresearch/dino/blob/ba9edd18db78a99193005ef991e04d63984b25a8/eval_copy_detection.py#L166-L175>
