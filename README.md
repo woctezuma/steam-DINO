@@ -26,8 +26,8 @@ It consists of **vertical** Steam banners (300x450 resolution), available for 29
 Images are resized to 224x224 resolution and available in an archive (703 MB) [as a release][github-input-data] in this repository.
 
 However, DINO has its own [pre-processing pipeline][dino-pre-process],  as in [`eval_linear.py`][dino-linear] and [`eval_knn.py`][dino-knn]:
-- resize to 256 resolution,
-- center-crop at 224 resolution,
+- [resize][resize] to 256 resolution, i.e. the **smallest** edge of the image will match this number,
+- [center-crop][centercrop] at 224 resolution, i.e. a **square** crop is made,
 - normalize intensity.
 
 ```python
@@ -58,6 +58,8 @@ transform = pth_transforms.Compose([
     pth_transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225)), 
 ])
 ```
+
+Please note that the call to `Resize()` here leads to a **square** output, losing the aspect ratio of the original image.
 
 This is also the case for [`eval_image_retrieval.py`][dino-image-retrieval]:
 
@@ -131,6 +133,8 @@ Other strategies for the creation of the image embedding would include:
 [match_steam_banners_with_DINO-notebook]: <https://colab.research.google.com/github/woctezuma/steam-DINO/blob/main/match_steam_banners_with_DINO.ipynb>
 
 [issue-feature-extraction]: <https://github.com/facebookresearch/dino/issues/72>
+[resize]: <https://pytorch.org/vision/main/generated/torchvision.transforms.Resize.html>
+[centercrop]: <https://pytorch.org/vision/main/generated/torchvision.transforms.CenterCrop.html>
 
 [fb-dino-blog]: <https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training>
 [fb-dino-code]: <https://github.com/facebookresearch/dino>
