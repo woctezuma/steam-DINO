@@ -115,33 +115,33 @@ NB: `B/8` is expected to under-perform w.r.t. `S/8`, as its hyperparameters [cou
 The following results are obtained with `ComplexB16`.
 
 ![7 Days to Die](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/7days_to_die.jpg)
-
+--
 ![Artifact](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/artifact.jpg)
-
+--
 ![Fall Guys](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/fall_guys.jpg)
-
+--
 ![Grim Dawn](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/grim_dawn.jpg)
-
+--
 ![Guacamelee](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/guacamelee.jpg)
-
+--
 ![Half-Life Lost Coast](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/half_life_coast.jpg)
-
+--
 ![Hitman](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/hitman.jpg)
-
+--
 ![Left 4 Dead 2](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/l4d2.jpg)
-
+--
 ![Life is Strange](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/life_is_strange.jpg)
-
+--
 ![Monster Hunter](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/monster_hunter.jpg)
-
+--
 ![Mount & Blade](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/mount_blade.jpg)
-
+--
 ![Rust](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/rust.jpg)
-
+--
 ![Stardew Valley](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/stardew_valley.jpg)
-
+--
 ![Tomb Raider](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/tomb_raider.jpg)
-
+--
 ![World of Tanks](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/world_of_tanks.jpg)
 
 ### Comparison
