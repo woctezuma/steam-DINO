@@ -110,6 +110,83 @@ NB: `B/8` is expected to under-perform w.r.t. `S/8`, as its hyperparameters [cou
 [github-issue-knn]: <https://github.com/facebookresearch/dino/issues/13#issuecomment-857469740>
 [github-issue-b8]: <https://github.com/facebookresearch/dino/issues/13#issuecomment-832617172>
 
+### Examples
+
+The following results are obtained with `ComplexB16`.
+
+![7 Days to Die](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/7days_to_die.jpg)
+
+![Artifact](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/artifact.jpg)
+
+![Fall Guys](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/fall_guys.jpg)
+
+![Grim Dawn](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/grim_dawn.jpg)
+
+![Guacamelee](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/guacamelee.jpg)
+
+![Half-Life Lost Coast](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/half_life_coast.jpg)
+
+![Hitman](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/hitman.jpg)
+
+![Left 4 Dead 2](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/l4d2.jpg)
+
+![Life is Strange](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/life_is_strange.jpg)
+
+![Monster Hunter](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/monster_hunter.jpg)
+
+![Mount & Blade](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/mount_blade.jpg)
+
+![Rust](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/rust.jpg)
+
+![Stardew Valley](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/stardew_valley.jpg)
+
+![Tomb Raider](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/tomb_raider.jpg)
+
+![World of Tanks](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB16/world_of_tanks.jpg)
+
+### Comparison
+
+Settings are compared below for the same game, *EuroTruck Simulator 2*.
+Sorted from the best to the worst output.
+
+`SimpleB16`
+
+![SimpleB16](https://github.com/woctezuma/steam-DINO/wiki/img/ranking/1_sb16.jpg)
+
+`ComplexB16`
+
+![ComplexB16](https://github.com/woctezuma/steam-DINO/wiki/img/ranking/2_cb16.jpg)
+
+`ComplexS8`
+
+![ComplexS8](https://github.com/woctezuma/steam-DINO/wiki/img/ranking/3_cs8.jpg)
+
+`SimpleS8`
+
+![SimpleS8](https://github.com/woctezuma/steam-DINO/wiki/img/ranking/4_ss8.jpg)
+
+`SimpleB8`
+
+![SimpleB8](https://github.com/woctezuma/steam-DINO/wiki/img/ranking/5_sb8.jpg)
+
+`ComplexB8`
+
+![ComplexB8](https://github.com/woctezuma/steam-DINO/wiki/img/ranking/6_cb8.jpg)
+
+`ComplexS16`
+
+![ComplexS16](https://github.com/woctezuma/steam-DINO/wiki/img/ranking/7_cs16.jpg)
+
+`SimpleS16`
+
+![SimpleS16](https://github.com/woctezuma/steam-DINO/wiki/img/ranking/8_ss16.jpg)
+
+### Unique games
+
+The following result is obtained with `ComplexB8`.
+
+![Unique games](https://github.com/woctezuma/steam-DINO/wiki/img/ComplexB8/unique.jpg)
+
 ## Perspectives
 
 Other strategies for the creation of the image embedding would include:
